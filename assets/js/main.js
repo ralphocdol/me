@@ -1,5 +1,5 @@
 'use strict';
-import { sidebar } from './data.js';
+import { name, sidebar } from './data.js';
 
 (async () => {
   // Populate sidebar
@@ -15,10 +15,15 @@ import { sidebar } from './data.js';
   };
 
   // Initial Page load
-  document.getElementById('content').innerHTML = await getContent(sidebar[0]);
+  const webtitle_name = `${name.fullname().toLowerCase().replace(/\s/g, '')}`;
+  const urlHash = window.location.hash;
+  const initialPageName = urlHash ? urlHash.substr(1) : sidebar[0];
+  document.getElementById('content').innerHTML = await getContent(initialPageName);
+  document.getElementById('webtitle').innerHTML = `${webtitle_name} | ${initialPageName}`;
 
   document.getElementById('sidebar-items').addEventListener('click', async (event) => {
     const selectedSidebar = event.target.innerText;
+    document.getElementById('webtitle').innerHTML = `${webtitle_name} | ${selectedSidebar}`;
     const content = await getContent(selectedSidebar);
     document.getElementById('content').innerHTML = content;
   });
