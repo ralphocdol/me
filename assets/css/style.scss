@@ -1,0 +1,191 @@
+$accent-color: #2fc4b2;
+$sidebar-width: 250px;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+  padding-top: 30px;
+  background: #2f323a;
+  position: fixed;
+  left: 0;
+  width: $sidebar-width;
+  height: 100%;
+  transition: 0.5s;
+  transition-property: left;
+  .profile_image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 6px solid #fff;
+  }
+  h2 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  #sidebar-items {
+    a {
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 60px;
+      text-decoration: none;
+      padding-left: 40px;
+      box-sizing: border-box;
+      transition: 0.5s;
+      transition-property: background;
+      &:hover {
+        background: $accent-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  i {
+    padding-right: 10px;
+  }
+  // #sidebar-footer {
+  //   height: 50px;
+  //   position: absolute;
+  //   width: 100%;
+  //   bottom: 0;
+  //   list-style-type: none;
+  //   padding-bottom: 2em;
+
+  //   .switch {
+  //     position: relative;
+  //     display: inline-block;
+  //     width: 60px;
+  //     height: 34px;
+  //     input {
+  //       opacity: 0;
+  //       width: 0;
+  //       height: 0;
+  //     }
+  //     .slider {
+  //       position: absolute;
+  //       cursor: pointer;
+  //       top: 0;
+  //       left: 0;
+  //       right: 0;
+  //       bottom: 0;
+  //       background-color: #ccc;
+  //       -webkit-transition: 0.4s;
+  //       transition: 0.4s;
+  //       &:before {
+  //         position: absolute;
+  //         content: '';
+  //         height: 26px;
+  //         width: 26px;
+  //         left: 4px;
+  //         bottom: 4px;
+  //         background-color: white;
+  //         -webkit-transition: 0.4s;
+  //         transition: 0.4s;
+  //       }
+  //       &.round {
+  //         border-radius: 34px;
+  //         &:before {
+  //           border-radius: 50%;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .switch-label {
+  //     color: white;
+  //   }
+
+  //   input:checked + .slider {
+  //     background-color: #2196f3;
+  //   }
+
+  //   input:focus + .slider {
+  //     box-shadow: 0 0 1px #2196f3;
+  //   }
+
+  //   input:checked + .slider:before {
+  //     -webkit-transform: translateX(26px);
+  //     -ms-transform: translateX(26px);
+  //     transform: translateX(26px);
+  //   }
+  // }
+}
+
+.content {
+  margin-left: $sidebar-width;
+  /* background: url(background.png) no-repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
+  height: 100vh;
+  transition: 0.5s;
+}
+
+#experience {
+  .experience_line {
+    position: fixed;
+    border-right: 5px solid black;
+    height: 100%;
+    width: 150px;
+  }
+  .header {
+    background-color: black;
+    color: white;
+    padding-left: 270px;
+    margin-bottom: 40px;
+    font-size: 50px;
+  }
+  #position_list {
+    .eachexperience {
+      margin-bottom: 50px;
+      .position_date {
+        position: absolute;
+        border-radius: 100%;
+        background-color: #222831;
+        width: 90px;
+        height: 90px;
+        margin-left: 95px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        padding: 10px;
+      }
+      .eachcompany {
+        .company_name {
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 35px;
+          padding-left: 270px;
+          font-weight: 100;
+        }
+        .position_container {
+          min-height: 75px;
+          padding: 10px 0 10px 270px;
+          background-color: #2fc4b34f;
+          .position_name {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            span {
+              font-size: 15px;
+              font-weight: 200;
+            }
+          }
+          .position_details {
+            padding: 0 100px 10px 0;
+            ul {
+              margin-block-start: 0;
+              margin-block-end: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

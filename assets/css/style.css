@@ -11,7 +11,9 @@ body {
   left: 0;
   width: 250px;
   height: 100%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition-property: left;
   transition-property: left;
 }
 
@@ -23,36 +25,122 @@ body {
   border: 6px solid #fff;
 }
 
-.sidebar h4 {
+.sidebar h2 {
   color: #ccc;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.sidebar a {
+.sidebar #sidebar-items a {
   color: #fff;
   display: block;
   width: 100%;
   line-height: 60px;
   text-decoration: none;
   padding-left: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition-property: background;
   transition-property: background;
 }
 
-.sidebar a:hover {
-  background: #19b3d3;
+.sidebar #sidebar-items a:hover {
+  background: #2fc4b2;
+  font-weight: bold;
 }
 
 .sidebar i {
   padding-right: 10px;
 }
+
 .content {
   margin-left: 250px;
   /* background: url(background.png) no-repeat; */
   /* background-position: center; */
   /* background-size: cover; */
   height: 100vh;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
+#experience .experience_line {
+  position: fixed;
+  border-right: 5px solid black;
+  height: 100%;
+  width: 150px;
+}
+
+#experience .header {
+  background-color: black;
+  color: white;
+  padding-left: 270px;
+  margin-bottom: 40px;
+  font-size: 50px;
+}
+
+#experience #position_list .eachexperience {
+  margin-bottom: 50px;
+}
+
+#experience #position_list .eachexperience .position_date {
+  position: absolute;
+  border-radius: 100%;
+  background-color: #222831;
+  width: 90px;
+  height: 90px;
+  margin-left: 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  padding: 10px;
+}
+
+#experience #position_list .eachexperience .eachcompany .company_name {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 35px;
+  padding-left: 270px;
+  font-weight: 100;
+}
+
+#experience #position_list .eachexperience .eachcompany .position_container {
+  min-height: 75px;
+  padding: 10px 0 10px 270px;
+  background-color: #2fc4b34f;
+}
+
+#experience #position_list .eachexperience .eachcompany .position_container .position_name {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#experience #position_list .eachexperience .eachcompany .position_container .position_name span {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+#experience #position_list .eachexperience .eachcompany .position_container .position_details {
+  padding: 0 100px 10px 0;
+}
+
+#experience #position_list .eachexperience .eachcompany .position_container .position_details ul {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+/*# sourceMappingURL=style.css.map */
