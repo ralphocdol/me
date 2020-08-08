@@ -61,19 +61,20 @@ body {
   /* background-position: center; */
   /* background-size: cover; */
   height: 100vh;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  background-color: #293745;
+  color: white;
+  overflow-y: auto;
 }
 
 #experience .experience_line {
-  position: fixed;
-  border-right: 5px solid black;
+  position: absolute;
+  border-right: 5px solid #2e2e2e;
   height: 100%;
   width: 150px;
 }
 
 #experience .header {
-  background-color: black;
+  background-color: #1b4144;
   color: white;
   padding-left: 270px;
   margin-bottom: 40px;
@@ -84,13 +85,31 @@ body {
   margin-bottom: 50px;
 }
 
-#experience #position_list .eachexperience .position_date {
-  position: absolute;
-  border-radius: 100%;
+#experience #position_list .eachexperience .eachcompany .company_date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: relative;
+}
+
+#experience #position_list .eachexperience .eachcompany .company_date .company_name {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 35px;
+  margin: auto 0 10px 50px;
+  font-weight: 100;
+}
+
+#experience #position_list .eachexperience .eachcompany .company_date .position_date {
+  position: relative;
+  border-radius: 100% 100% 0 0;
   background-color: #222831;
-  width: 90px;
-  height: 90px;
-  margin-left: 95px;
+  margin: 10px 0 0 105px;
+  width: 80px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,14 +125,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
-  padding: 10px;
-}
-
-#experience #position_list .eachexperience .eachcompany .company_name {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 35px;
-  padding-left: 270px;
-  font-weight: 100;
+  padding: 10px 5px 0 5px;
 }
 
 #experience #position_list .eachexperience .eachcompany .position_container {

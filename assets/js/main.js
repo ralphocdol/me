@@ -36,13 +36,6 @@ import { name, sidebar, experiences } from './data.js';
   }
 
   async function experienceFN() {
-    const position_date = (workdate) => `
-      <div class="position_date">
-            <div>${workdate.to}</div>
-            <div><i class="fas fa-angle-up fa-sm"></i></div>
-            <div>${workdate.from}</div>
-      </div>
-    `;
     const eachposition = (positions) => {
       return positions
         .map((position) => {
@@ -63,7 +56,14 @@ import { name, sidebar, experiences } from './data.js';
     const eachcompany = (data) => {
       return `
         <div class="eachcompany">
-          <div class="company_name">${data.company}</div>
+          <div class="company_date">
+            <div class="position_date">
+              <div>${data.workdate().to}</div>
+              <div><i class="fas fa-angle-up fa-sm"></i></div>
+              <div>${data.workdate().from}</div>
+            </div>
+            <div class="company_name">${data.company}</div>
+          </div>
           ${eachposition(data.positions)}
         </div>
       `;
@@ -73,7 +73,6 @@ import { name, sidebar, experiences } from './data.js';
       .map((experience) => {
         return `
         <div class="eachexperience">
-          ${position_date(experience.workdate())}
           ${eachcompany(experience)}
         </div>
       `;

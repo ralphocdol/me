@@ -122,18 +122,23 @@ body {
   /* background-position: center; */
   /* background-size: cover; */
   height: 100vh;
-  transition: 0.5s;
+  // transition: 0.5s;
+  background-color: #293745;
+  color: white;
+  overflow-y: auto;
 }
+
+$timeline_line: 150;
 
 #experience {
   .experience_line {
-    position: fixed;
-    border-right: 5px solid black;
+    position: absolute;
+    border-right: 5px solid rgb(46, 46, 46);
     height: 100%;
-    width: 150px;
+    width: #{$timeline_line}px;
   }
   .header {
-    background-color: black;
+    background-color: #1b4144;
     color: white;
     padding-left: 270px;
     margin-bottom: 40px;
@@ -142,27 +147,33 @@ body {
   #position_list {
     .eachexperience {
       margin-bottom: 50px;
-      .position_date {
-        position: absolute;
-        border-radius: 100%;
-        background-color: #222831;
-        width: 90px;
-        height: 90px;
-        margin-left: 95px;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        color: white;
-        padding: 10px;
-      }
+
       .eachcompany {
-        .company_name {
-          font-family: 'Ubuntu', sans-serif;
-          font-size: 35px;
-          padding-left: 270px;
-          font-weight: 100;
+        .company_date {
+          display: flex;
+          flex-flow: row wrap;
+          position: relative;
+          .company_name {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 35px;
+            margin: auto 0 10px 50px;
+            font-weight: 100;
+          }
+          .position_date {
+            position: relative;
+            border-radius: 100% 100% 0 0;
+            background-color: #222831;
+            margin: 10px 0 0 105px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            color: white;
+            padding: 10px 5px 0 5px;
+          }
         }
         .position_container {
           min-height: 75px;
